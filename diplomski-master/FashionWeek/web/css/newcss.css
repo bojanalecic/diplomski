@@ -1,0 +1,86 @@
+/*
+    Document   : newcss
+    Created on : 09-Sep-2013, 19:46:01
+    Author     : BojLec
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background-color: #111111;
+    color: #999999;
+
+}
+html{
+    display: block;
+}
+
+#top {
+    background-image: url('../slike/bojana.jpg');
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 0px;
+    width: 1200px;
+    top:20px;
+    left: 0px;
+    position: relative;
+    height: 200px;
+    background-position: right;
+}
+
+#mainWraper{
+    width:1200px;
+    background-color: #000000;
+    margin: 0px auto;
+}
+#menu {
+    position: relative;
+    float:left;
+    width:200px;
+    margin-bottom: 10px;
+}
+#right {
+    position: relative;
+    float:right;
+    width:250px;
+    /*background-color: green;*/
+
+    margin-bottom: 65px;
+}
+
+#bottom {
+    clear: both;
+    position: relative;
+    background-color: lightblue;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    height: 15px;
+}
+
+#left submenu{
+
+    border: 5px solid red;
+}
+.ui-panelmenu-content{
+    margin-top: 1px!important;
+    border-top: 1px solid #a8a8a8!important;
+
+    margin-bottom: 5px;
+}
+
+
+#menu li{
+    font-size:12px;
+}
+
+#menu a:hover {
+    background-color: lightblue;
+}
+#session {
+    background-color: lightblue;
+    height:30px;
+    margin-bottom: 3px;
+}
+#center{
+    width:80%;
+    margin-left: 305px;
+}

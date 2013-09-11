@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="session">
+
+            </ui:define>
+
+            <ui:define name="top">
+
+            </ui:define>
+
+            <ui:define name="menu">
+
+            </ui:define>
+
+            <ui:define name="right">
+
+            </ui:define>
+
+            <ui:define name="center">
+               <c:if test="#{mbLoginBean.ulogovan}" >
+                    <h:form>
+                    <p:dataTable var="dizajner" widgetVar="dizajnerTable" value="#{mbDizajnerBean.vratiSveDizajnere()}" emptyMessage="#{sadrzaj['nemaDizajnera.jsf']}" 
+                                         rowKey="#{dizajner.jmbg}" filteredValue="#{mbDizajnerBean.filtriraniDizajneri}" selectionMode="single" selection ="#{mbDizajnerBean.selektovaniDizajner}" >                                  
+                            
+                                <p:column id="imeColumn" filterBy="#{dizajner.ime}"  filterMatchMode="startsWith"  headerText="#{sadrzaj['ime.jsf']}">
+                                    <h:outputText value="#{dizajner.ime}" />  
+                                </p:column>  
+
+                                <p:column id="prezimeColumn" filterBy="#{dizajner.prezime}"  filterMatchMode="startsWith" headerText="#{sadrzaj['prezime.jsf']}" >  
+                                    <h:outputText value="#{dizajner.prezime}" />  
+                                </p:column>  
+                                <p:column id="sponzorColumn" headerText="#{sadrzaj['meniSponzori.jsf']}" >  
+                                    <h:outputText value="#{dizajner.sponzor.naziv}" />
+                                </p:column>   
+                                <f:facet name="footer">  
+                                    <p:commandButton  disabled="#{mbDizajnerBean.vratiSveDizajnere().size() == 0 }" id="izmeniButton" value="#{sadrzaj['izmeni.jsf']}" icon="ui-icon-edit"  
+                                                      oncomplete="izmeniDizajnera.show()"  ajax="true" />  
+                                </f:facet>
+                            </p:dataTable>  
+                       </h:form>
+                </c:if>
+            </ui:define>
+
+            
+
+        </ui:composition>
+
+    </h:body>
+</html>
+
