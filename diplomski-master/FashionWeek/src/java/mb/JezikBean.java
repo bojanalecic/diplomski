@@ -28,8 +28,8 @@ public class JezikBean implements Serializable {
 
     static {
         drzave = new LinkedHashMap<String, Object>();
-        drzave.put("Srpski", Locale.forLanguageTag("sr_RS_Latin"));
-        drzave.put("English", Locale.forLanguageTag("en_GB"));
+        drzave.put("Srpski", Locale.forLanguageTag("sr_RS_Latn"));
+        drzave.put("English", Locale.forLanguageTag("en_GB_Latn"));
 
     }
 

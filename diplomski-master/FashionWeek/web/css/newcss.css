@@ -37,6 +37,13 @@ html{
     float:left;
     width:200px;
     margin-bottom: 10px;
+    top:235px;
+}
+#center{
+    width:80%;
+    margin-left: 305px;
+    position:absolute;
+    top:235px;
 }
 #right {
     position: relative;
@@ -79,8 +86,4 @@ html{
     background-color: lightblue;
     height:30px;
     margin-bottom: 3px;
-}
-#center{
-    width:80%;
-    margin-left: 305px;
 }
